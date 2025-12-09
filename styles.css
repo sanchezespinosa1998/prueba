@@ -110,6 +110,55 @@ html {
         background-color var(--transition);
 }
 
+.nav-cluster {
+    pointer-events: none;
+}
+
+.nav-cluster>* {
+    pointer-events: auto;
+}
+
+.nav-side-button {
+    background: linear-gradient(135deg, rgba(17, 17, 17, 0.95), rgba(34, 34, 34, 0.95));
+    color: #f5f5f5;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05),
+        0 10px 24px rgba(0, 0, 0, 0.35);
+    width: 160px;
+    flex: 0 0 160px;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, border 0.2s ease;
+}
+
+.nav-side-button:hover {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(20, 20, 20, 0.95));
+    transform: translateY(-1px) scale(1.02);
+}
+
+.nav-side-button:active {
+    transform: translateY(1px);
+}
+
+.nav-side-button--copied {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.95), rgba(22, 163, 74, 0.95)) !important;
+    color: #041407 !important;
+    width: 160px;
+}
+
+.section-badge {
+    padding-top: 0.35rem !important;
+    padding-bottom: 0.35rem !important;
+}
+
+@media (min-width: 640px) {
+    .section-badge {
+        padding-top: 0.45rem !important;
+        padding-bottom: 0.45rem !important;
+    }
+}
+
 
 .btn::before {
     content: "";
@@ -186,34 +235,6 @@ html {
     transition: opacity var(--transition), filter var(--transition);
 }
 
-.btn-nav:hover {
-    border: solid 1px hsla(var(--highlight-color-hue), 100%, 80%, 0.4);
-    box-shadow:
-        0 0 20px rgba(124, 58, 237, 0.3),
-        0 0 40px rgba(124, 58, 237, 0.1),
-        0px -1px 1px rgba(0, 0, 0, 0.02),
-        0px -2px 2px rgba(0, 0, 0, 0.03),
-        0px -4px 4px rgba(0, 0, 0, 0.05),
-        0px -8px 8px rgba(0, 0, 0, 0.06),
-        0px -16px 16px rgba(0, 0, 0, 0.08);
-}
-
-.btn-nav:hover::before {
-    box-shadow:
-        0 -8px 8px -6px #fffa inset,
-        0 -16px 16px -8px hsla(var(--highlight-color-hue), 100%, 70%, 0.3) inset,
-        1px 1px 1px #fff2,
-        2px 2px 2px #fff1,
-        -1px -1px 1px #0002,
-        -2px -2px 2px #0001;
-}
-
-.btn-nav:hover::after {
-    opacity: 1;
-    -webkit-mask-image: linear-gradient(0deg, #fff, transparent);
-    mask-image: linear-gradient(0deg, #fff, transparent);
-}
-
 .btn-letter {
     position: relative;
     display: inline-block;
@@ -230,7 +251,7 @@ html {
 }
 
 .btn-svg {
-    flex-grow: 1;
+    flex: 0 0 auto;
     height: 24px;
     margin-right: 0.5rem;
     fill: #e8e8e8;
@@ -250,6 +271,9 @@ html {
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1 1 auto;
     min-width: 6.4em;
 }
 
@@ -374,32 +398,6 @@ html {
     animation: none;
 }
 
-.btn:hover {
-    border: solid 1px hsla(var(--highlight-color-hue), 100%, 80%, 0.4);
-}
-
-.btn:hover::before {
-    box-shadow:
-        0 -8px 8px -6px #fffa inset,
-        0 -16px 16px -8px hsla(var(--highlight-color-hue), 100%, 70%, 0.3) inset,
-        1px 1px 1px #fff2,
-        2px 2px 2px #fff1,
-        -1px -1px 1px #0002,
-        -2px -2px 2px #0001;
-}
-
-.btn:hover::after {
-    opacity: 1;
-    -webkit-mask-image: linear-gradient(0deg, #fff, transparent);
-    mask-image: linear-gradient(0deg, #fff, transparent);
-}
-
-.btn:hover .btn-svg {
-    fill: #fff;
-    filter:
-        drop-shadow(0 0 3px hsl(var(--highlight-color-hue), 100%, 70%)) drop-shadow(0 -4px 6px #0009);
-    animation: none;
-}
 
 /* Animación láser perpetua */
 @keyframes laser-sweep {
@@ -508,454 +506,7 @@ html {
 }
 
 
-/* Animación de estrellas flotantes */
-/* Animación de estrellas flotantes con movimiento aleatorio */
-@keyframes float1 {
 
-    0%,
-    100% {
-        transform: translate(0px, 0px) rotate(0deg);
-        opacity: 0.6;
-    }
-
-    25% {
-        transform: translate(15px, -10px) rotate(90deg);
-        opacity: 0.9;
-    }
-
-    50% {
-        transform: translate(-8px, -25px) rotate(180deg);
-        opacity: 1;
-    }
-
-    75% {
-        transform: translate(12px, -15px) rotate(270deg);
-        opacity: 0.8;
-    }
-}
-
-@keyframes float2 {
-
-    0%,
-    100% {
-        transform: translate(0px, 0px) rotate(0deg);
-        opacity: 0.5;
-    }
-
-    20% {
-        transform: translate(-12px, -8px) rotate(72deg);
-        opacity: 0.8;
-    }
-
-    40% {
-        transform: translate(18px, -20px) rotate(144deg);
-        opacity: 1;
-    }
-
-    60% {
-        transform: translate(-5px, -30px) rotate(216deg);
-        opacity: 0.7;
-    }
-
-    80% {
-        transform: translate(10px, -12px) rotate(288deg);
-        opacity: 0.9;
-    }
-}
-
-@keyframes float3 {
-
-    0%,
-    100% {
-        transform: translate(0px, 0px) rotate(0deg);
-        opacity: 0.4;
-    }
-
-    30% {
-        transform: translate(8px, -15px) rotate(108deg);
-        opacity: 0.8;
-    }
-
-    60% {
-        transform: translate(-15px, -22px) rotate(216deg);
-        opacity: 1;
-    }
-
-    90% {
-        transform: translate(6px, -8px) rotate(324deg);
-        opacity: 0.6;
-    }
-}
-
-@keyframes twinkle {
-
-    0%,
-    100% {
-        opacity: 0.3;
-        transform: scale(1);
-    }
-
-    25% {
-        opacity: 0.8;
-        transform: scale(1.1);
-    }
-
-    50% {
-        opacity: 1;
-        transform: scale(1.3);
-    }
-
-    75% {
-        opacity: 0.6;
-        transform: scale(0.9);
-    }
-}
-
-.star {
-    position: absolute;
-    background: white;
-    border-radius: 50%;
-    animation: twinkle 3s ease-in-out infinite;
-}
-
-.star.purple {
-    background: #7C3AED;
-    box-shadow: 0 0 6px #7C3AED, 0 0 12px #7C3AED, 0 0 18px #7C3AED;
-}
-
-/* Aplicar diferentes animaciones de movimiento a grupos de estrellas */
-.star:nth-child(3n+1) {
-    animation: float1 8s ease-in-out infinite, twinkle 2.5s ease-in-out infinite;
-}
-
-.star:nth-child(3n+2) {
-    animation: float2 10s ease-in-out infinite, twinkle 3.5s ease-in-out infinite;
-}
-
-.star:nth-child(3n) {
-    animation: float3 12s ease-in-out infinite, twinkle 4s ease-in-out infinite;
-}
-
-/* Delays aleatorios para cada estrella */
-.star:nth-child(1) {
-    animation-delay: 0s, 0s;
-}
-
-.star:nth-child(2) {
-    animation-delay: -1s, -0.5s;
-}
-
-.star:nth-child(3) {
-    animation-delay: -2s, -1s;
-}
-
-.star:nth-child(4) {
-    animation-delay: -3s, -1.5s;
-}
-
-.star:nth-child(5) {
-    animation-delay: -4s, -2s;
-}
-
-.star:nth-child(6) {
-    animation-delay: -5s, -2.5s;
-}
-
-.star:nth-child(7) {
-    animation-delay: -6s, -3s;
-}
-
-.star:nth-child(8) {
-    animation-delay: -7s, -3.5s;
-}
-
-.star:nth-child(9) {
-    animation-delay: -8s, -4s;
-}
-
-.star:nth-child(10) {
-    animation-delay: -9s, -4.5s;
-}
-
-.star:nth-child(11) {
-    animation-delay: -10s, -5s;
-}
-
-.star:nth-child(12) {
-    animation-delay: -11s, -5.5s;
-}
-
-.star:nth-child(13) {
-    animation-delay: -12s, -6s;
-}
-
-.star:nth-child(14) {
-    animation-delay: -13s, -6.5s;
-}
-
-.star:nth-child(15) {
-    animation-delay: -14s, -7s;
-}
-
-.star:nth-child(16) {
-    animation-delay: -15s, -7.5s;
-}
-
-.star:nth-child(17) {
-    animation-delay: -16s, -8s;
-}
-
-.star:nth-child(18) {
-    animation-delay: -17s, -8.5s;
-}
-
-.star:nth-child(19) {
-    animation-delay: -18s, -9s;
-}
-
-.star:nth-child(20) {
-    animation-delay: -19s, -9.5s;
-}
-
-.star:nth-child(21) {
-    animation-delay: -20s, -10s;
-}
-
-.star:nth-child(22) {
-    animation-delay: -21s, -10.5s;
-}
-
-.star:nth-child(23) {
-    animation-delay: -22s, -11s;
-}
-
-.star:nth-child(24) {
-    animation-delay: -23s, -11.5s;
-}
-
-.star:nth-child(25) {
-    animation-delay: -24s, -12s;
-}
-
-.star:nth-child(26) {
-    animation-delay: -25s, -12.5s;
-}
-
-.star:nth-child(27) {
-    animation-delay: -26s, -13s;
-}
-
-.star:nth-child(28) {
-    animation-delay: -27s, -13.5s;
-}
-
-.star:nth-child(29) {
-    animation-delay: -28s, -14s;
-}
-
-.star:nth-child(30) {
-    animation-delay: -29s, -14.5s;
-}
-
-.star:nth-child(31) {
-    animation-delay: -30s, -15s;
-}
-
-.star:nth-child(32) {
-    animation-delay: -31s, -15.5s;
-}
-
-.star:nth-child(33) {
-    animation-delay: -32s, -16s;
-}
-
-.star:nth-child(34) {
-    animation-delay: -33s, -16.5s;
-}
-
-.star:nth-child(35) {
-    animation-delay: -34s, -17s;
-}
-
-.star:nth-child(36) {
-    animation-delay: -35s, -17.5s;
-}
-
-.star:nth-child(37) {
-    animation-delay: -36s, -18s;
-}
-
-.star:nth-child(38) {
-    animation-delay: -37s, -18.5s;
-}
-
-.star:nth-child(39) {
-    animation-delay: -38s, -19s;
-}
-
-.star:nth-child(40) {
-    animation-delay: -39s, -19.5s;
-}
-
-.star:nth-child(41) {
-    animation-delay: -40s, -20s;
-}
-
-.star:nth-child(42) {
-    animation-delay: -41s, -20.5s;
-}
-
-.star:nth-child(43) {
-    animation-delay: -42s, -21s;
-}
-
-.star:nth-child(44) {
-    animation-delay: -43s, -21.5s;
-}
-
-.star:nth-child(45) {
-    animation-delay: -44s, -22s;
-}
-
-.star:nth-child(46) {
-    animation-delay: -45s, -22.5s;
-}
-
-.star:nth-child(47) {
-    animation-delay: -46s, -23s;
-}
-
-.star:nth-child(48) {
-    animation-delay: -47s, -23.5s;
-}
-
-.star:nth-child(49) {
-    animation-delay: -48s, -24s;
-}
-
-.star:nth-child(50) {
-    animation-delay: -49s, -24.5s;
-}
-
-.star:nth-child(51) {
-    animation-delay: -50s, -25s;
-}
-
-.star:nth-child(52) {
-    animation-delay: -51s, -25.5s;
-}
-
-.star:nth-child(53) {
-    animation-delay: -52s, -26s;
-}
-
-.star:nth-child(54) {
-    animation-delay: -53s, -26.5s;
-}
-
-.star:nth-child(55) {
-    animation-delay: -54s, -27s;
-}
-
-.star:nth-child(56) {
-    animation-delay: -55s, -27.5s;
-}
-
-.star:nth-child(57) {
-    animation-delay: -56s, -28s;
-}
-
-.star:nth-child(58) {
-    animation-delay: -57s, -28.5s;
-}
-
-.star:nth-child(59) {
-    animation-delay: -58s, -29s;
-}
-
-.star:nth-child(60) {
-    animation-delay: -59s, -29.5s;
-}
-
-.star:nth-child(61) {
-    animation-delay: -60s, -30s;
-}
-
-.star:nth-child(62) {
-    animation-delay: -61s, -30.5s;
-}
-
-.star:nth-child(63) {
-    animation-delay: -62s, -31s;
-}
-
-.star:nth-child(64) {
-    animation-delay: -63s, -31.5s;
-}
-
-.star:nth-child(65) {
-    animation-delay: -64s, -32s;
-}
-
-.star:nth-child(66) {
-    animation-delay: -65s, -32.5s;
-}
-
-.star:nth-child(67) {
-    animation-delay: -66s, -33s;
-}
-
-.star:nth-child(68) {
-    animation-delay: -67s, -33.5s;
-}
-
-.star:nth-child(69) {
-    animation-delay: -68s, -34s;
-}
-
-.star:nth-child(70) {
-    animation-delay: -69s, -34.5s;
-}
-
-.star:nth-child(71) {
-    animation-delay: -70s, -35s;
-}
-
-.star:nth-child(72) {
-    animation-delay: -71s, -35.5s;
-}
-
-.star:nth-child(73) {
-    animation-delay: -72s, -36s;
-}
-
-.star:nth-child(74) {
-    animation-delay: -73s, -36.5s;
-}
-
-.star:nth-child(75) {
-    animation-delay: -74s, -37s;
-}
-
-.star:nth-child(76) {
-    animation-delay: -75s, -37.5s;
-}
-
-.star:nth-child(77) {
-    animation-delay: -76s, -38s;
-}
-
-.star:nth-child(78) {
-    animation-delay: -77s, -38.5s;
-}
-
-.star:nth-child(79) {
-    animation-delay: -78s, -39s;
-}
-
-.star:nth-child(80) {
-    animation-delay: -79s, -39.5s;
-}
 
 /* Ocultar estrellas en vista móvil */
 @media (max-width: 768px) {
@@ -971,25 +522,7 @@ html {
     }
 }
 
-/* Ocultar nave en sección de servicios en vista móvil */
-@media (max-width: 768px) {
-    .spaceship-title {
-        display: none !important;
-    }
-}
 
-
-/* Deshabilitar funcionalidad de la nave en móvil */
-@media (max-width: 768px) {
-    .spaceship {
-        pointer-events: none !important;
-        cursor: default !important;
-    }
-
-    .spaceship img {
-        cursor: default !important;
-    }
-}
 
 /* Reducir texto del proceso en móvil */
 @media (max-width: 768px) {
@@ -1166,6 +699,30 @@ html {
     animation: perpetual-hover-svg 3s ease-in-out infinite;
 }
 
+/* Estado hover para botón de consulta gratuita - fondo blanco y texto negro */
+.btn-consulta-gratuita:hover {
+    background-color: white !important;
+    color: black;
+}
+
+.btn-consulta-gratuita:hover .txt-wrapper span {
+    color: black;
+}
+
+.btn-consulta-gratuita:hover .btn-svg {
+    fill: black;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3));
+    animation: none;
+}
+
+.btn-consulta-gratuita:hover::before {
+    animation: none;
+}
+
+.btn-consulta-gratuita:hover::after {
+    animation: none;
+}
+
 /* Fix para franja gris en móvil al hacer scroll */
 html {
     height: 100%;
@@ -1236,11 +793,509 @@ body {
 /* Ajuste de posición de CONVERSIONES en móvil */
 @media (max-width: 640px) {
     .conversiones-mobile {
-        transform: translateX(-8px);
+        transform: translateX(0);
+        word-break: normal;
+        overflow-wrap: break-word;
+    }
+
+    .hero-title {
+        padding: 0 0.5rem;
+        font-size: clamp(1.75rem, 7vw, 2.5rem);
+        word-break: normal;
+        overflow-wrap: break-word;
+    }
+
+    .hero-title span {
+        word-break: normal;
+        overflow-wrap: break-word;
+    }
+
+    /* Prevenir que se rompa la palabra "emprendedores" */
+    .hero-title span span:last-child {
+        white-space: nowrap;
+    }
+
+    .hero-desktop-text {
+        padding: 0;
+    }
+
+    .hero-subtitle {
+        padding: 0 0.5rem;
+        font-size: clamp(0.95rem, 4vw, 1.25rem);
+    }
+}
+
+    .nav-cluster {
+        gap: 0.5rem;
+    }
+
+    .nav-side-button {
+        width: 100px;
+        flex: 0 0 100px;
+        font-size: 0.58rem;
+        padding: 0.28rem 0.55rem;
+        gap: 0.4rem;
+    }
+
+    .nav-side-button--copied {
+        width: 100px;
     }
 
     /* Eliminar sombra del nav en móvil */
     .btn-nav {
         box-shadow: none !important;
+        transition: none !important;
     }
+
+    .btn-nav::before,
+    .btn-nav::after {
+        transition: none !important;
+    }
+
+    /* CTA blanco con letras negras en móvil - manteniendo efectos */
+    .btn-consulta-gratuita {
+        background-color: white !important;
+        color: black;
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .btn-consulta-gratuita::before {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .btn-consulta-gratuita::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .btn-consulta-gratuita .txt-wrapper span {
+        color: black !important;
+    }
+
+    .btn-consulta-gratuita .btn-svg {
+        fill: black;
+        filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3));
+        animation: none !important;
+    }
+
+    /* Eliminar todos los efectos hover del CTA en móvil */
+    .btn-consulta-gratuita:hover {
+        background-color: white !important;
+        color: black !important;
+    }
+
+    .btn-consulta-gratuita:hover .txt-wrapper span {
+        color: black !important;
+    }
+
+    .btn-consulta-gratuita:hover .btn-svg {
+        fill: black !important;
+        filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3)) !important;
+        animation: none !important;
+    }
+
+    .btn-consulta-gratuita:hover::before {
+        animation: none !important;
+    }
+
+    .btn-consulta-gratuita:hover::after {
+        animation: none !important;
+    }
+
+    /* Eliminar animaciones parpadeantes del nav si las tiene */
+    .btn-nav {
+        animation: none !important;
+    }
+
+    .btn-nav::before {
+        animation: none !important;
+    }
+
+    .btn-nav::after {
+        animation: none !important;
+    }
+}
+
+/* Hero: contenedor responsivo para video vertical */
+.hero-video-wrapper {
+    position: relative;
+    aspect-ratio: 1080 / 1450;
+    width: min(45%, 900px);
+    max-width: 450px;
+    height: auto;
+    overflow: visible;
+    box-shadow:
+        0 20px 60px rgba(124, 58, 237, 0.8),
+        0 50px 120px rgba(124, 58, 237, 0.65),
+        0 90px 200px rgba(124, 58, 237, 0.5);
+}
+
+.hero-video-wrapper::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    height: 22px;
+    background: linear-gradient(to bottom,
+            rgba(124, 58, 237, 0.9),
+            rgba(124, 58, 237, 0));
+    border-top-left-radius: calc(1.5rem + 4px);
+    border-top-right-radius: calc(1.5rem + 4px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-video-frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.hero-video-badge {
+    position: absolute;
+    left: 50%;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.hero-video-badge--top {
+    top: 0;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 12px 30px rgba(124, 58, 237, 0.35);
+}
+
+.hero-video-badge--bottom {
+    bottom: 0;
+    transform: translate(-50%, 50%);
+}
+
+.hero-video-wrapper--desktop {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    aspect-ratio: 16 / 9;
+    border-radius: 2rem;
+    overflow: visible;
+    background: #050505;
+    border: 4px solid rgba(255, 255, 255, 0.12);
+    border-top-color: rgba(124, 58, 237, 0.75);
+}
+
+.hero-video-wrapper--desktop::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+            rgba(10, 10, 18, 0.35) 0%,
+            rgba(8, 8, 18, 0.55) 100%);
+    opacity: 0.45;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-video-wrapper--desktop .hero-video-frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.hero-video-wrapper--desktop .hero-video-frame iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-video-wrapper--desktop .hero-video-badge {
+    z-index: 4;
+    pointer-events: auto;
+}
+
+.hero-video-wrapper--desktop .hero-video-badge--top {
+    top: 0;
+    transform: translate(-50%, calc(-50% - 8px));
+    z-index: 6;
+}
+
+.hero-video-wrapper--desktop .hero-video-badge--bottom {
+    bottom: 0;
+    transform: translate(-50%, calc(50% + 8px));
+    z-index: 6;
+}
+
+.hero-desktop {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.hero-desktop-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.hero-title {
+    font-size: clamp(2rem, 6.5vw, 5rem);
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+.hero-title span {
+    line-height: 1.1;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+.hero-title span span {
+    display: inline;
+}
+
+@media (min-width: 640px) {
+    .hero-title {
+        width: 100%;
+        max-width: 100%;
+        overflow: visible;
+        min-width: 0;
+    }
+
+    .hero-title span {
+        white-space: nowrap;
+        word-break: normal;
+        overflow-wrap: normal;
+        display: block;
+        width: 100%;
+        text-align: center;
+        overflow: visible;
+    }
+
+    .hero-title span span {
+        white-space: nowrap;
+        display: inline;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-desktop-content {
+        max-width: 1400px !important;
+    }
+
+    .hero-title {
+        font-size: clamp(3rem, 7vw, 6rem);
+    }
+}
+
+.hero-subtitle {
+    font-size: clamp(1.05rem, 2.5vw, 1.75rem);
+    line-height: 1.5;
+}
+
+.hero-desktop-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    overflow: visible;
+}
+
+@media (min-width: 1024px) {
+    .hero-desktop-text {
+        overflow-x: visible;
+    }
+}
+
+.hero-desktop-text .hero-title {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-desktop-text .hero-title span {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-desktop-text .hero-subtitle {
+    max-width: 1200px;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Modal de confirmación WhatsApp */
+.whatsapp-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.whatsapp-dialog.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.whatsapp-dialog-content {
+    background: linear-gradient(135deg, #1D1D1D 0%, #2D2D2D 100%);
+    border-radius: 24px;
+    padding: 2rem 2.5rem;
+    text-align: center;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    max-width: 320px;
+    width: 90%;
+    animation: dialogFadeIn 0.3s ease-out;
+}
+
+@keyframes dialogFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.whatsapp-dialog-icon {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
+}
+
+.whatsapp-dialog-icon svg {
+    color: #25D366;
+    filter: drop-shadow(0 0 8px rgba(37, 211, 102, 0.4));
+}
+
+.whatsapp-dialog-message {
+    margin-top: 0.5rem;
+}
+
+.whatsapp-dialog-text {
+    color: white;
+    font-family: 'Unbounded', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+
+/* Animación de puntos suspensivos */
+.whatsapp-dialog-text::after {
+    content: '...';
+    animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+
+    0%,
+    20% {
+        content: '.';
+    }
+
+    40% {
+        content: '..';
+    }
+
+    60%,
+    100% {
+        content: '...';
+    }
+}
+
+/* Animación radial de columnas (Column Reveal) */
+@keyframes columnReveal {
+    0% {
+        clip-path: inset(0 0 100% 0);
+        opacity: 0;
+    }
+
+    100% {
+        clip-path: inset(0 0 0% 0);
+        opacity: 1;
+    }
+}
+
+.col-anim {
+    animation: columnReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    will-change: clip-path;
+    opacity: 0;
+}
+
+/* Delays escalonados para las columnas */
+.delay-1 {
+    animation-delay: 0.1s;
+}
+
+.delay-2 {
+    animation-delay: 0.2s;
+}
+
+.delay-3 {
+    animation-delay: 0.3s;
+}
+
+.delay-4 {
+    animation-delay: 0.4s;
+}
+
+.delay-5 {
+    animation-delay: 0.5s;
+}
+
+.delay-6 {
+    animation-delay: 0.6s;
+}
+
+.delay-7 {
+    animation-delay: 0.7s;
 }
