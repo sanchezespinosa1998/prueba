@@ -105,9 +105,10 @@ html {
     border-radius: var(--border-radius);
     cursor: pointer;
     transition:
-        box-shadow var(--transition),
-        border var(--transition),
-        background-color var(--transition);
+        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        border 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-cluster {
@@ -233,6 +234,38 @@ html {
     background-position: 0 0;
     opacity: 0;
     transition: opacity var(--transition), filter var(--transition);
+}
+
+/* Efectos hover para el botón del nav */
+.btn-nav:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        0 10px 30px rgba(0,0,0,0.6), 
+        0 20px 60px rgba(0,0,0,0.4),
+        0 0 20px rgba(255, 255, 255, 0.3) !important;
+    background-color: #f8f8f8;
+    transition:
+        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-nav:hover img {
+    transform: rotate(5deg) scale(1.1);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-nav:hover span {
+    transform: translateX(2px);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-nav img {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-nav span {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-letter {
@@ -683,43 +716,93 @@ html {
 }
 
 /* Aplicar la animación a los botones de consulta gratuita */
-.btn-consulta-gratuita {
+.btn.btn-consulta-gratuita {
+    background-color: #101010 !important;
+    color: white !important;
     animation: perpetual-hover 3s ease-in-out infinite;
 }
 
-.btn-consulta-gratuita::before {
+.btn.btn-consulta-gratuita .txt-wrapper {
+    color: white !important;
+}
+
+.btn.btn-consulta-gratuita .txt-wrapper span {
+    color: white !important;
+    transition: 
+        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+        color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn.btn-consulta-gratuita::before {
     animation: perpetual-hover-before 3s ease-in-out infinite;
 }
 
-.btn-consulta-gratuita::after {
+.btn.btn-consulta-gratuita::after {
     animation: perpetual-hover-after 3s ease-in-out infinite;
 }
 
-.btn-consulta-gratuita .btn-svg {
+.btn.btn-consulta-gratuita .btn-svg {
+    fill: #e8e8e8 !important;
+    filter: drop-shadow(0 0 2px #ffffff99);
     animation: perpetual-hover-svg 3s ease-in-out infinite;
+    transition: 
+        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+        fill 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+        filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Estado hover para botón de consulta gratuita - fondo blanco y texto negro */
-.btn-consulta-gratuita:hover {
+.btn.btn-consulta-gratuita {
+    transition: 
+        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn.btn-consulta-gratuita:hover {
     background-color: white !important;
-    color: black;
+    color: black !important;
+    transform: scale(1.05);
+    box-shadow: 
+        0 10px 30px rgba(0,0,0,0.6), 
+        0 20px 60px rgba(0,0,0,0.4),
+        0 0 20px rgba(255, 255, 255, 0.3) !important;
+    transition:
+        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-consulta-gratuita:hover .txt-wrapper span {
-    color: black;
+.btn.btn-consulta-gratuita:hover .txt-wrapper {
+    color: black !important;
 }
 
-.btn-consulta-gratuita:hover .btn-svg {
-    fill: black;
+.btn.btn-consulta-gratuita:hover .txt-wrapper span {
+    color: black !important;
+    transform: translateX(2px);
+    transition: 
+        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn.btn-consulta-gratuita:hover .btn-svg {
+    fill: black !important;
     filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3));
     animation: none;
+    transform: rotate(5deg) scale(1.1);
+    transition: 
+        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        fill 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-consulta-gratuita:hover::before {
+.btn.btn-consulta-gratuita:hover::before {
     animation: none;
 }
 
-.btn-consulta-gratuita:hover::after {
+.btn.btn-consulta-gratuita:hover::after {
     animation: none;
 }
 
@@ -1298,4 +1381,39 @@ body {
 
 .delay-7 {
     animation-delay: 0.7s;
+}
+
+/* Menú lateral de navegación */
+#side-nav {
+    pointer-events: auto;
+}
+
+.nav-dot {
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-dot.active {
+    background-color: #7C3AED !important;
+    border-color: #7C3AED !important;
+    transform: scale(1.25);
+}
+
+.nav-dot.active .nav-label {
+    opacity: 1 !important;
+}
+
+.nav-dot:hover {
+    transform: scale(1.25);
+}
+
+.nav-dot:hover .nav-label {
+    opacity: 1 !important;
+}
+
+/* Ocultar menú lateral en móvil */
+@media (max-width: 1023px) {
+    #side-nav {
+        display: none !important;
+    }
 }

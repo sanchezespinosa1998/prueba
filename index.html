@@ -98,7 +98,7 @@
         class="nav-cluster flex items-center gap-3 px-0 py-0 sm:px-4 sm:py-2 rounded-full bg-transparent sm:bg-[#202020]/95 border border-transparent sm:border-white/10 shadow-none sm:shadow-[0_20px_40px_rgba(0,0,0,0.4)] sm:backdrop-blur-md">
         <header>
           <a href="/" rel="noopener noreferrer"
-            class="btn-nav flex items-center gap-2 bg-white rounded-full px-5 py-2 transform transition-transform duration-200 hover:scale-105"
+            class="btn-nav flex items-center gap-2 bg-white rounded-full px-5 py-2 transform transition-all duration-300 ease-in-out hover:scale-105"
             style="box-shadow: 0 10px 30px rgba(0,0,0,0.6), 0 20px 60px rgba(0,0,0,0.4);">
             <img src="icono.svg" alt="Hiperorb Icon" class="w-6 h-6" width="24" height="24" decoding="async"
               fetchpriority="high">
@@ -107,6 +107,40 @@
         </header>
       </div>
     </div>
+
+    <!-- Menú lateral de navegación -->
+    <nav id="side-nav" class="fixed right-6 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block">
+      <div class="flex flex-col gap-4">
+        <a href="#hero" data-section="hero"
+          class="nav-dot w-3 h-3 rounded-full bg-white/30 border-2 border-white/50 transition-all duration-300 hover:bg-white/50 hover:scale-125 relative group">
+          <span
+            class="nav-label absolute right-6 top-1/2 transform -translate-y-1/2 opacity-0 transition-opacity duration-300 whitespace-nowrap text-white text-sm font-unbounded pr-3">
+            Inicio
+          </span>
+        </a>
+        <a href="#servicios" data-section="servicios"
+          class="nav-dot w-3 h-3 rounded-full bg-white/30 border-2 border-white/50 transition-all duration-300 hover:bg-white/50 hover:scale-125 relative group">
+          <span
+            class="nav-label absolute right-6 top-1/2 transform -translate-y-1/2 opacity-0 transition-opacity duration-300 whitespace-nowrap text-white text-sm font-unbounded pr-3">
+            Servicios
+          </span>
+        </a>
+        <a href="#testimonios" data-section="testimonios"
+          class="nav-dot w-3 h-3 rounded-full bg-white/30 border-2 border-white/50 transition-all duration-300 hover:bg-white/50 hover:scale-125 relative group">
+          <span
+            class="nav-label absolute right-6 top-1/2 transform -translate-y-1/2 opacity-0 transition-opacity duration-300 whitespace-nowrap text-white text-sm font-unbounded pr-3">
+            Testimonios
+          </span>
+        </a>
+        <a href="#portafolio" data-section="portafolio"
+          class="nav-dot w-3 h-3 rounded-full bg-white/30 border-2 border-white/50 transition-all duration-300 hover:bg-white/50 hover:scale-125 relative group">
+          <span
+            class="nav-label absolute right-6 top-1/2 transform -translate-y-1/2 opacity-0 transition-opacity duration-300 whitespace-nowrap text-white text-sm font-unbounded pr-3">
+            Portafolio
+          </span>
+        </a>
+      </div>
+    </nav>
 
     <!-- Hero -->
     <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden overflow-x-hidden"
@@ -243,87 +277,6 @@
 
 
 
-    <!-- Qué es Hiperorb -->
-    <section id="que_es_hiperorb"
-      class="sm:px-6 sm:pb-20 lg:px-8 lg:pt-20 lg:mt-20 lg:mb-20 max-w-7xl mt-20 mr-auto mb-20 ml-auto pt-16 pr-4 pb-16 pl-4">
-      <div class="mx-auto max-w-6xl">
-        <div class="text-center mb-16">
-          <span
-            class="section-badge inline-flex items-center gap-3 rounded-full border-gradient before:rounded-full bg-white/20 px-4 sm:px-6 py-2 sm:py-3 text-sm font-medium text-white font-unbounded">
-            Qué es Hiperorb
-          </span>
-          <h2
-            class="mt-4 sm:mt-6 text-3xl sm:text-4xl lg:text-5xl xl:text-6xl tracking-tight font-unbounded font-medium">
-            Un ecosistema de diseño, estrategia y tecnología
-          </h2>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div
-            class="rounded-2xl border-gradient before:rounded-2xl px-6 py-8 text-center group transition-all duration-300"
-            style="background-color: #1D1D1D;">
-            <div
-              class="w-12 h-12 mx-auto mb-4 rounded-full bg-[#7C3AED]/20 flex items-center justify-center group-hover:bg-[#7C3AED]/30 transition-colors duration-300">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                class="w-6 h-6 text-[#7C3AED]">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
-                </path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-white font-unbounded mb-3">
-              Estrategia
-            </h3>
-            <p class="text-base sm:text-lg text-white/85 font-unbounded leading-relaxed">
-              Entendemos tu negocio, tu mercado y la psicología de tus clientes para definir un plan claro y accionable.
-            </p>
-          </div>
-
-          <div
-            class="rounded-2xl border-gradient before:rounded-2xl px-6 py-8 text-center group transition-all duration-300"
-            style="background-color: #1D1D1D;">
-            <div
-              class="w-12 h-12 mx-auto mb-4 rounded-full bg-[#7C3AED]/20 flex items-center justify-center group-hover:bg-[#7C3AED]/30 transition-colors duration-300">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                class="w-6 h-6 text-[#7C3AED]">
-                <path d="M3 3v18h18"></path>
-                <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-white font-unbounded mb-3">
-              Ejecución
-            </h3>
-            <p class="text-base sm:text-lg text-white/85 font-unbounded leading-relaxed">
-              Diseñamos y desarrollamos productos digitales, webs, contenidos y sistemas de marca que se ven bien y
-              funcionan mejor.
-            </p>
-          </div>
-
-          <div
-            class="rounded-2xl border-gradient before:rounded-2xl px-6 py-8 text-center group transition-all duration-300"
-            style="background-color: #1D1D1D;">
-            <div
-              class="w-12 h-12 mx-auto mb-4 rounded-full bg-[#7C3AED]/20 flex items-center justify-center group-hover:bg-[#7C3AED]/30 transition-colors duration-300">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                class="w-6 h-6 text-[#7C3AED]">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
-                </path>
-                <path d="M12 6v6l4 2"></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold text-white font-unbounded mb-3">
-              Escalado
-            </h3>
-            <p class="text-base sm:text-lg text-white/85 font-unbounded leading-relaxed">
-              Optimizamos funnels, métricas y procesos para que tu proyecto crezca de forma sostenible y medible.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Servicios -->
     <section id="servicios"
       class="sm:px-6 sm:pb-20 lg:px-8 lg:pt-20 lg:mt-20 lg:mb-20 max-w-7xl mt-20 mr-auto mb-20 ml-auto pt-16 pr-4 pb-16 pl-4">
@@ -342,188 +295,471 @@
 
         <!-- Grid de servicios -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="rounded-2xl border-gradient before:rounded-2xl px-6 py-8 group transition-all duration-300"
-            style="background-color: #1D1D1D;">
-            <h3 class="text-xl font-semibold text-white font-unbounded mb-3">
+          <div
+            class="rounded-2xl border-gradient before:rounded-2xl px-6 py-8 group transition-all duration-300 flex flex-col hover:scale-105 hover:shadow-2xl hover:shadow-[#7C3AED]/20 hover:bg-[#252525] cursor-pointer"
+            style="background-color: #1D1D1D; min-height: 450px;">
+            <h3
+              class="text-xl font-semibold text-white font-unbounded mb-3 group-hover:text-[#7C3AED] transition-colors duration-300">
               Diseño y desarrollo web
             </h3>
-            <p class="text-base text-white/85 font-unbounded leading-relaxed mb-4">
+            <p class="text-base text-white/85 font-unbounded leading-relaxed mb-6">
               Webs rápidas, modernas y orientadas a conversión para dar credibilidad a tu proyecto.
             </p>
+            <ul class="space-y-3 flex-grow">
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Diseño responsive y adaptativo para todos los
+                  dispositivos</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Optimización SEO y velocidad de carga</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Integración con sistemas de pago y CRM</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Animaciones y microinteracciones
+                  personalizadas</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Formularios de contacto y captación de leads</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Panel de administración y gestión de contenido</span>
+              </li>
+            </ul>
           </div>
 
-          <div class="rounded-2xl border-gradient before:rounded-2xl px-6 py-8 group transition-all duration-300"
-            style="background-color: #1D1D1D;">
-            <h3 class="text-xl font-semibold text-white font-unbounded mb-3">
+          <div
+            class="rounded-2xl border-gradient before:rounded-2xl px-6 py-8 group transition-all duration-300 flex flex-col hover:scale-105 hover:shadow-2xl hover:shadow-[#7C3AED]/20 hover:bg-[#252525] cursor-pointer"
+            style="background-color: #1D1D1D; min-height: 450px;">
+            <h3
+              class="text-xl font-semibold text-white font-unbounded mb-3 group-hover:text-[#7C3AED] transition-colors duration-300">
               Landing pages de conversión
             </h3>
-            <p class="text-base text-white/85 font-unbounded leading-relaxed mb-4">
+            <p class="text-base text-white/85 font-unbounded leading-relaxed mb-6">
               Páginas enfocadas 100% en conseguir registros, ventas o leads de calidad.
             </p>
+            <ul class="space-y-3 flex-grow">
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Diseño orientado a la conversión y psicología del
+                  usuario</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Copywriting persuasivo y llamadas a la acción
+                  optimizadas</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Formularios optimizados y reducción de
+                  fricción</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Integración con herramientas de email
+                  marketing</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Pruebas A/B y optimización continua</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Tracking y análisis de conversiones</span>
+              </li>
+            </ul>
           </div>
 
-          <div class="rounded-2xl border-gradient before:rounded-2xl px-6 py-8 group transition-all duration-300"
-            style="background-color: #1D1D1D;">
-            <h3 class="text-xl font-semibold text-white font-unbounded mb-3">
+          <div
+            class="rounded-2xl border-gradient before:rounded-2xl px-6 py-8 group transition-all duration-300 flex flex-col hover:scale-105 hover:shadow-2xl hover:shadow-[#7C3AED]/20 hover:bg-[#252525] cursor-pointer"
+            style="background-color: #1D1D1D; min-height: 450px;">
+            <h3
+              class="text-xl font-semibold text-white font-unbounded mb-3 group-hover:text-[#7C3AED] transition-colors duration-300">
               Branding e identidad visual
             </h3>
-            <p class="text-base text-white/85 font-unbounded leading-relaxed mb-4">
+            <p class="text-base text-white/85 font-unbounded leading-relaxed mb-6">
               Creamos marcas memorables con sentido estratégico y aplicación digital real.
             </p>
+            <ul class="space-y-3 flex-grow">
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Diseño de logotipo y sistema de identidad
+                  visual</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Paleta de colores y tipografía personalizada</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Manual de marca y guía de estilo</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Diseño de iconografía y elementos gráficos</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Aplicación de marca en diferentes soportes</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Estrategia de posicionamiento de marca</span>
+              </li>
+            </ul>
           </div>
 
-          <div class="rounded-2xl border-gradient before:rounded-2xl px-6 py-8 group transition-all duration-300"
-            style="background-color: #1D1D1D;">
-            <h3 class="text-xl font-semibold text-white font-unbounded mb-3">
+          <div
+            class="rounded-2xl border-gradient before:rounded-2xl px-6 py-8 group transition-all duration-300 flex flex-col hover:scale-105 hover:shadow-2xl hover:shadow-[#7C3AED]/20 hover:bg-[#252525] cursor-pointer"
+            style="background-color: #1D1D1D; min-height: 450px;">
+            <h3
+              class="text-xl font-semibold text-white font-unbounded mb-3 group-hover:text-[#7C3AED] transition-colors duration-300">
               UX/UI y diseño de producto
             </h3>
-            <p class="text-base text-white/85 font-unbounded leading-relaxed mb-4">
+            <p class="text-base text-white/85 font-unbounded leading-relaxed mb-6">
               Diseño de productos digitales centrados en el usuario, listos para desarrollo.
             </p>
+            <ul class="space-y-3 flex-grow">
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Research de usuarios y análisis de necesidades</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Wireframes y arquitectura de información</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Diseño de interfaces y prototipos interactivos</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Sistemas de diseño y componentes reutilizables</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Testing de usabilidad y iteración</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Handoff técnico para desarrollo</span>
+              </li>
+            </ul>
           </div>
 
-          <div class="rounded-2xl border-gradient before:rounded-2xl px-6 py-8 group transition-all duration-300"
-            style="background-color: #1D1D1D;">
-            <h3 class="text-xl font-semibold text-white font-unbounded mb-3">
+          <div
+            class="rounded-2xl border-gradient before:rounded-2xl px-6 py-8 group transition-all duration-300 flex flex-col hover:scale-105 hover:shadow-2xl hover:shadow-[#7C3AED]/20 hover:bg-[#252525] cursor-pointer"
+            style="background-color: #1D1D1D; min-height: 450px;">
+            <h3
+              class="text-xl font-semibold text-white font-unbounded mb-3 group-hover:text-[#7C3AED] transition-colors duration-300">
               Aplicaciones web y full-stack
             </h3>
-            <p class="text-base text-white/85 font-unbounded leading-relaxed mb-4">
+            <p class="text-base text-white/85 font-unbounded leading-relaxed mb-6">
               Dashboards, SaaS y herramientas internas diseñadas y desarrolladas a medida.
             </p>
+            <ul class="space-y-3 flex-grow">
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Desarrollo frontend y backend completo</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Bases de datos y APIs RESTful</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Sistemas de autenticación y autorización</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Integración con servicios de terceros</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Dashboards analíticos y visualización de datos</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Despliegue y mantenimiento continuo</span>
+              </li>
+            </ul>
           </div>
 
-          <div class="rounded-2xl border-gradient before:rounded-2xl px-6 py-8 group transition-all duration-300"
-            style="background-color: #1D1D1D;">
-            <h3 class="text-xl font-semibold text-white font-unbounded mb-3">
+          <div
+            class="rounded-2xl border-gradient before:rounded-2xl px-6 py-8 group transition-all duration-300 flex flex-col hover:scale-105 hover:shadow-2xl hover:shadow-[#7C3AED]/20 hover:bg-[#252525] cursor-pointer"
+            style="background-color: #1D1D1D; min-height: 450px;">
+            <h3
+              class="text-xl font-semibold text-white font-unbounded mb-3 group-hover:text-[#7C3AED] transition-colors duration-300">
               Social media y contenido
             </h3>
-            <p class="text-base text-white/85 font-unbounded leading-relaxed mb-4">
+            <p class="text-base text-white/85 font-unbounded leading-relaxed mb-6">
               Estrategia, diseño y contenido para redes sociales con foco en negocio, no solo en likes.
             </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Cómo Trabajamos -->
-    <section id="proceso"
-      class="sm:px-6 sm:pb-20 lg:px-8 lg:pt-20 lg:mt-20 lg:mb-20 max-w-7xl mt-20 mr-auto mb-20 ml-auto pt-16 pr-4 pb-16 pl-4">
-      <div class="mx-auto max-w-6xl">
-        <div class="text-center mb-16">
-          <span
-            class="section-badge inline-flex items-center gap-3 rounded-full border-gradient before:rounded-full bg-white/20 px-4 sm:px-6 py-2 sm:py-3 text-sm font-medium text-white font-unbounded">
-
-            Nuestro Proceso
-          </span>
-          <h2
-            class="mt-4 sm:mt-6 text-3xl sm:text-4xl lg:text-5xl xl:text-6xl tracking-tight font-unbounded font-medium">
-            Un proceso claro para evitar caos y avanzar rápido
-          </h2>
-          <p class="mt-3 sm:mt-4 text-xl sm:text-2xl text-white/85 font-unbounded max-w-3xl mx-auto">
-            Cómo trabajamos
-
-
-          </p>
-        </div>
-
-        <!-- Proceso de trabajo -->
-        <div class="relative max-w-4xl mx-auto">
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Paso 1 -->
-            <div class="relative flex items-start gap-6 group">
-              <!-- Tarjeta -->
-              <div
-                class="flex-1 rounded-2xl border-gradient before:rounded-2xl p-8 transition-all duration-300 relative"
-                style="background-color: #1D1D1D;">
-                <div class="text-center">
-                  <!-- Punto láser encima del título -->
-                  <div
-                    class="w-12 h-12 rounded-full bg-[#7C3AED] flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <span class="text-lg font-bold text-black font-unbounded">1</span>
-                  </div>
-                  <h3 class="text-xl font-semibold text-white font-unbounded mb-4 process-title">
-                    Research y estrategia
-                  </h3>
-                  <p
-                    class="text-base sm:text-lg text-white/85 font-unbounded leading-relaxed process-description text-center">
-                    Analizamos tu negocio, objetivos, competidores y audiencia para definir una dirección clara.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Paso 2 -->
-            <div class="relative flex items-start gap-6 group">
-              <!-- Tarjeta -->
-              <div
-                class="flex-1 rounded-2xl border-gradient before:rounded-2xl p-8 transition-all duration-300 relative"
-                style="background-color: #1D1D1D;">
-                <div class="text-center">
-                  <!-- Punto láser encima del título -->
-                  <div
-                    class="w-12 h-12 rounded-full bg-[#7C3AED] flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <span class="text-lg font-bold text-black font-unbounded">2</span>
-                  </div>
-                  <h3 class="text-xl font-semibold text-white font-unbounded mb-4 process-title">
-                    Arquitectura y diseño
-                  </h3>
-                  <p
-                    class="text-base sm:text-lg text-white/85 font-unbounded leading-relaxed process-description text-center">
-                    Diseñamos la estructura, los flujos y la experiencia visual que tendrá tu proyecto.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Paso 3 -->
-            <div class="relative flex items-start gap-6 group">
-              <!-- Tarjeta -->
-              <div
-                class="flex-1 rounded-2xl border-gradient before:rounded-2xl p-8 transition-all duration-300 relative"
-                style="background-color: #1D1D1D;">
-                <div class="text-center">
-                  <!-- Punto láser encima del título -->
-                  <div
-                    class="w-12 h-12 rounded-full bg-[#7C3AED] flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <span class="text-lg font-bold text-black font-unbounded">3</span>
-                  </div>
-                  <h3 class="text-xl font-semibold text-white font-unbounded mb-4 process-title">
-                    Construcción y ejecución
-                  </h3>
-                  <p
-                    class="text-base sm:text-lg text-white/85 font-unbounded leading-relaxed process-description text-center">
-                    Desarrollamos webs, productos, campañas y contenidos con criterio técnico y estético.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Paso 4 -->
-            <div class="relative flex items-start gap-6 group">
-              <!-- Tarjeta -->
-              <div
-                class="flex-1 rounded-2xl border-gradient before:rounded-2xl p-8 transition-all duration-300 relative"
-                style="background-color: #1D1D1D;">
-                <div class="text-center">
-                  <!-- Punto láser encima del título -->
-                  <div
-                    class="w-12 h-12 rounded-full bg-[#7C3AED] flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <span class="text-lg font-bold text-black font-unbounded">4</span>
-                  </div>
-                  <h3 class="text-xl font-semibold text-white font-unbounded mb-4 process-title">
-                    Lanzamiento y optimización
-                  </h3>
-                  <p
-                    class="text-base sm:text-lg text-white/85 font-unbounded leading-relaxed process-description text-center">
-                    Medimos, ajustamos y mejoramos para que tus resultados no se queden en la teoría.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <ul class="space-y-3 flex-grow">
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Estrategia de contenido y calendario editorial</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Diseño gráfico para redes sociales</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Creación de contenido escrito y visual</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Gestión de comunidades y engagement</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Análisis de métricas y ROI</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] mt-0.5 flex-shrink-0 group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-sm text-white/80 font-unbounded">Campañas publicitarias en redes sociales</span>
+              </li>
+            </ul>
           </div>
         </div>
 
+        <!-- CTA Portafolio -->
+        <div class="mt-16 text-center">
+          <a href="#portafolio"
+            class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-black rounded-xl font-semibold font-unbounded text-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-white/25"
+            style="box-shadow: 0 10px 30px rgba(0,0,0,0.6), 0 20px 60px rgba(0,0,0,0.4);">
+            <span>Mirar portafolio</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+              <path d="M5 12h14"></path>
+              <path d="M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -548,10 +784,11 @@
         </div>
 
         <!-- Lista de testimonios -->
-        <div class="space-y-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <!-- Testimonio 1 -->
           <div class="w-full">
-            <div class="rounded-3xl border-gradient before:rounded-3xl p-8 lg:p-12 text-center"
+            <div
+              class="rounded-3xl border-gradient before:rounded-3xl p-8 lg:p-12 text-center group transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#7C3AED]/20 hover:bg-[#252525] cursor-pointer"
               style="background-color: #1D1D1D;">
               <blockquote class="text-base lg:text-lg text-white font-unbounded mb-6 leading-relaxed">
                 "Tuve el privilegio de trabajar con Aleks en el desarrollo de la web de nuestra academia. Desde el
@@ -561,40 +798,55 @@
                 totalmente a Aleks por su profesionalismo y dedicación"
               </blockquote>
               <div class="flex items-center justify-center gap-1 mb-4">
-                <svg class="w-5 h-5 text-[#7C3AED]" fill="currentColor" viewBox="0 0 20 20">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
                   <path
                     d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
                   </path>
                 </svg>
-                <svg class="w-5 h-5 text-[#7C3AED]" fill="currentColor" viewBox="0 0 20 20">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
                   <path
                     d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
                   </path>
                 </svg>
-                <svg class="w-5 h-5 text-[#7C3AED]" fill="currentColor" viewBox="0 0 20 20">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
                   <path
                     d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
                   </path>
                 </svg>
-                <svg class="w-5 h-5 text-[#7C3AED]" fill="currentColor" viewBox="0 0 20 20">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
                   <path
                     d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
                   </path>
                 </svg>
-                <svg class="w-5 h-5 text-[#7C3AED]" fill="currentColor" viewBox="0 0 20 20">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
                   <path
                     d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
                   </path>
                 </svg>
               </div>
-              <div class="text-white font-semibold font-unbounded text-lg">Ale Sabra</div>
-              <div class="text-white/75 text-sm font-unbounded">Brightfuture Academy</div>
+              <div
+                class="text-white font-semibold font-unbounded text-lg group-hover:text-[#7C3AED] transition-colors duration-300">
+                Ale Sabra</div>
+              <div
+                class="text-white/75 text-sm font-unbounded group-hover:text-white/90 transition-colors duration-300">
+                Brightfuture Academy</div>
             </div>
           </div>
 
           <!-- Testimonio 2 -->
           <div class="w-full">
-            <div class="rounded-3xl border-gradient before:rounded-3xl p-8 lg:p-12 text-center"
+            <div
+              class="rounded-3xl border-gradient before:rounded-3xl p-8 lg:p-12 text-center group transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#7C3AED]/20 hover:bg-[#252525] cursor-pointer"
               style="background-color: #1D1D1D;">
               <blockquote class="text-base lg:text-lg text-white font-unbounded mb-6 leading-relaxed">
                 "Aleks ha resultado ser una apuesta segura a la hora de diseñar y desarrollar mi pagina web.
@@ -602,40 +854,55 @@
                 resultados impecables en tiempo record. Seguiremos trabajando con el en el futuro."
               </blockquote>
               <div class="flex items-center justify-center gap-1 mb-4">
-                <svg class="w-5 h-5 text-[#7C3AED]" fill="currentColor" viewBox="0 0 20 20">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
                   <path
                     d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
                   </path>
                 </svg>
-                <svg class="w-5 h-5 text-[#7C3AED]" fill="currentColor" viewBox="0 0 20 20">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
                   <path
                     d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
                   </path>
                 </svg>
-                <svg class="w-5 h-5 text-[#7C3AED]" fill="currentColor" viewBox="0 0 20 20">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
                   <path
                     d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
                   </path>
                 </svg>
-                <svg class="w-5 h-5 text-[#7C3AED]" fill="currentColor" viewBox="0 0 20 20">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
                   <path
                     d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
                   </path>
                 </svg>
-                <svg class="w-5 h-5 text-[#7C3AED]" fill="currentColor" viewBox="0 0 20 20">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
                   <path
                     d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
                   </path>
                 </svg>
               </div>
-              <div class="text-white font-semibold font-unbounded text-lg">Mario Sánchez Espinosa</div>
-              <div class="text-white/75 text-sm font-unbounded">Consultor Senior en EY</div>
+              <div
+                class="text-white font-semibold font-unbounded text-lg group-hover:text-[#7C3AED] transition-colors duration-300">
+                Mario Sánchez Espinosa</div>
+              <div
+                class="text-white/75 text-sm font-unbounded group-hover:text-white/90 transition-colors duration-300">
+                Consultor Senior en EY</div>
             </div>
           </div>
 
           <!-- Testimonio 3 -->
           <div class="w-full">
-            <div class="rounded-3xl border-gradient before:rounded-3xl p-8 lg:p-12 text-center"
+            <div
+              class="rounded-3xl border-gradient before:rounded-3xl p-8 lg:p-12 text-center group transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#7C3AED]/20 hover:bg-[#252525] cursor-pointer"
               style="background-color: #1D1D1D;">
               <blockquote class="text-base lg:text-lg text-white font-unbounded mb-6 leading-relaxed">
                 "Me ha sorprendido con la rapidez y la calidad con la que ha desarrollado mi página web. En muy poco
@@ -643,40 +910,55 @@
                 contando con Aleks para el mantenimiento y futuros proyectos."
               </blockquote>
               <div class="flex items-center justify-center gap-1 mb-4">
-                <svg class="w-5 h-5 text-[#7C3AED]" fill="currentColor" viewBox="0 0 20 20">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
                   <path
                     d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
                   </path>
                 </svg>
-                <svg class="w-5 h-5 text-[#7C3AED]" fill="currentColor" viewBox="0 0 20 20">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
                   <path
                     d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
                   </path>
                 </svg>
-                <svg class="w-5 h-5 text-[#7C3AED]" fill="currentColor" viewBox="0 0 20 20">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
                   <path
                     d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
                   </path>
                 </svg>
-                <svg class="w-5 h-5 text-[#7C3AED]" fill="currentColor" viewBox="0 0 20 20">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
                   <path
                     d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
                   </path>
                 </svg>
-                <svg class="w-5 h-5 text-[#7C3AED]" fill="currentColor" viewBox="0 0 20 20">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
                   <path
                     d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
                   </path>
                 </svg>
               </div>
-              <div class="text-white font-semibold font-unbounded text-lg">Mario Marín Rodríguez</div>
-              <div class="text-white/75 text-sm font-unbounded">Asesor Energético en Gualú</div>
+              <div
+                class="text-white font-semibold font-unbounded text-lg group-hover:text-[#7C3AED] transition-colors duration-300">
+                Mario Marín Rodríguez</div>
+              <div
+                class="text-white/75 text-sm font-unbounded group-hover:text-white/90 transition-colors duration-300">
+                Asesor Energético en Gualú</div>
             </div>
           </div>
 
           <!-- Testimonio 4 -->
           <div class="w-full">
-            <div class="rounded-3xl border-gradient before:rounded-3xl p-8 lg:p-12 text-center"
+            <div
+              class="rounded-3xl border-gradient before:rounded-3xl p-8 lg:p-12 text-center group transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#7C3AED]/20 hover:bg-[#252525] cursor-pointer"
               style="background-color: #1D1D1D;">
               <blockquote class="text-base lg:text-lg text-white font-unbounded mb-6 leading-relaxed">
                 "Haber trabajado con Alejandro ha sido un gusto. Su capacidad de adaptarse a los cambios, su visión
@@ -684,34 +966,165 @@
                 su desarrollo. Es genial poder contar con él en proyectos."
               </blockquote>
               <div class="flex items-center justify-center gap-1 mb-4">
-                <svg class="w-5 h-5 text-[#7C3AED]" fill="currentColor" viewBox="0 0 20 20">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
                   <path
                     d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
                   </path>
                 </svg>
-                <svg class="w-5 h-5 text-[#7C3AED]" fill="currentColor" viewBox="0 0 20 20">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
                   <path
                     d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
                   </path>
                 </svg>
-                <svg class="w-5 h-5 text-[#7C3AED]" fill="currentColor" viewBox="0 0 20 20">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
                   <path
                     d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
                   </path>
                 </svg>
-                <svg class="w-5 h-5 text-[#7C3AED]" fill="currentColor" viewBox="0 0 20 20">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
                   <path
                     d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
                   </path>
                 </svg>
-                <svg class="w-5 h-5 text-[#7C3AED]" fill="currentColor" viewBox="0 0 20 20">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
                   <path
                     d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
                   </path>
                 </svg>
               </div>
-              <div class="text-white font-semibold font-unbounded text-lg">Israel Gómez</div>
-              <div class="text-white/75 text-sm font-unbounded">Consultor de marca personal</div>
+              <div
+                class="text-white font-semibold font-unbounded text-lg group-hover:text-[#7C3AED] transition-colors duration-300">
+                Israel Gómez</div>
+              <div
+                class="text-white/75 text-sm font-unbounded group-hover:text-white/90 transition-colors duration-300">
+                Consultor de marca personal</div>
+            </div>
+          </div>
+
+          <!-- Testimonio 5 -->
+          <div class="w-full">
+            <div
+              class="rounded-3xl border-gradient before:rounded-3xl p-8 lg:p-12 text-center group transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#7C3AED]/20 hover:bg-[#252525] cursor-pointer"
+              style="background-color: #1D1D1D;">
+              <blockquote class="text-base lg:text-lg text-white font-unbounded mb-6 leading-relaxed">
+                "Tuve la oportunidad de colaborar con Aleks en el desarrollo de una plataforma personalizada en
+                WordPress, un sistema académico con integración con Teachworks y venta de recursos educativos. Aleks
+                coordinó todo el proyecto con una visión clara, comunicación constante y un alto nivel de exigencia
+                técnica y estética. Fue un placer trabajar con alguien que sabe traducir las necesidades del cliente en
+                objetivos concretos y prioriza la calidad del resultado final. Sin duda, una experiencia muy positiva y
+                profesional."
+              </blockquote>
+              <div class="flex items-center justify-center gap-1 mb-4">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+              </div>
+              <div
+                class="text-white font-semibold font-unbounded text-lg group-hover:text-[#7C3AED] transition-colors duration-300">
+                Cesar Moreno Ramírez</div>
+              <div
+                class="text-white/75 text-sm font-unbounded group-hover:text-white/90 transition-colors duration-300">
+                Desarrollador Web (Freelancer)</div>
+            </div>
+          </div>
+
+          <!-- Testimonio 6 -->
+          <div class="w-full">
+            <div
+              class="rounded-3xl border-gradient before:rounded-3xl p-8 lg:p-12 text-center group transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#7C3AED]/20 hover:bg-[#252525] cursor-pointer"
+              style="background-color: #1D1D1D;">
+              <blockquote class="text-base lg:text-lg text-white font-unbounded mb-6 leading-relaxed">
+                "El trabajo de Alejandro para con nuestra empresa está siendo magnífico. En la creación de nuestra
+                propia plataforma, Alejandro está destacando por la rapidez no solo en la creación, sino en las
+                modificaciones y adaptaciones que le vamos pidiendo para que la CRM se ajuste al máximo a nuestros
+                métodos de trabajo. Además de esto, todas las sugerencias de mejora y directrices siempre son recibidas
+                con una sonrisa. Compromiso, talento y rapidez de ejecución, poco mas se puede pedir a alguien!!"
+              </blockquote>
+              <div class="flex items-center justify-center gap-1 mb-4">
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+                <svg
+                  class="w-5 h-5 text-[#7C3AED] group-hover:scale-110 group-hover:text-[#9D5AED] transition-all duration-300"
+                  fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+              </div>
+              <div
+                class="text-white font-semibold font-unbounded text-lg group-hover:text-[#7C3AED] transition-colors duration-300">
+                Francisco Javier Gil Fernández</div>
+              <div
+                class="text-white/75 text-sm font-unbounded group-hover:text-white/90 transition-colors duration-300">
+                Responsable de Backoffice y Tramitaciones en Gualú</div>
             </div>
           </div>
         </div>
@@ -722,9 +1135,8 @@
 
 
     <!-- Portafolio -->
-    <section id="portafolio"
-      class="sm:px-6 sm:pb-20 lg:px-8 lg:pt-20 lg:mt-20 lg:mb-20 max-w-7xl mt-20 mr-auto mb-20 ml-auto pt-16 pr-4 pb-16 pl-4">
-      <div class="mx-auto max-w-6xl">
+    <section id="portafolio" class="sm:px-6 sm:pb-20 lg:px-8 lg:pt-20 lg:mt-20 lg:mb-20 mt-20 mb-20 pt-16 pb-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <span
             class="section-badge inline-flex items-center gap-3 rounded-full border-gradient before:rounded-full bg-white/20 px-4 sm:px-6 py-2 sm:py-3 text-sm font-medium text-white font-unbounded">
@@ -741,222 +1153,242 @@
 
         </div>
 
-        <!-- Grid de proyectos -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+        <!-- Lista de proyectos -->
+        <div class="space-y-16">
           <!-- Proyecto 1 -->
-          <div
-            class="group relative overflow-hidden rounded-2xl border-gradient before:rounded-2xl transition-all duration-300 flex flex-col h-full min-h-[250px]"
-            style="background-color: #1D1D1D;">
-            <div
-              class="aspect-[4/3] overflow-hidden bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
-              <img src="portafolio/image.webp" alt="E-commerce Premium" class="w-full h-full object-cover"
-                loading="lazy" decoding="async">
-            </div>
-            <div class="p-4 flex flex-col justify-between h-full">
-              <div>
-                <h3 class="text-lg font-semibold text-white font-unbounded mb-2">Brightfuture Academy</h3>
-                <p class="text-base text-white/85 font-unbounded mb-4">
+          <div class="w-full">
+            <div class="rounded-3xl border-gradient before:rounded-3xl overflow-hidden"
+              style="background-color: #1D1D1D;">
+              <div class="p-6 lg:p-8">
+                <h3 class="text-2xl lg:text-3xl font-semibold text-white font-unbounded mb-3">Brightfuture Academy</h3>
+                <p class="text-base lg:text-lg text-white/85 font-unbounded mb-6">
                   Desarrollé esta página web para una academia de asignaturas de bachillerato internacional.
                   Siguiendo las mejores prácticas de diseño y desarrollo web, la página web es fácil de usar y navegar,
                   y tiene un diseño moderno y atractivo. Garantizando una buena experiencia de usuario y un alto
                   rendimiento.
                 </p>
-              </div>
-              <button
-                class="w-full px-6 py-3 bg-white border-2 border-white text-gray-800 text-sm font-unbounded rounded-xl hover:bg-gray-100 hover:border-gray-200 hover:shadow-lg hover:shadow-white/25 transition-all duration-300 flex items-center justify-center gap-2 group relative overflow-hidden"
-                onclick="window.open('https://brightfuture.es/', '_blank')"
-                aria-label="Ver proyecto Brightfuture Academy">
-                <span class="relative z-10">Ver proyecto</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300 relative z-10">
-                  <path d="M7 17L17 7"></path>
-                  <path d="M7 7h10v10"></path>
-                </svg>
-                <div
-                  class="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="mb-6">
+                  <a href="https://brightfuture.es/" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-black rounded-xl font-semibold font-unbounded text-base hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-white/25"
+                    style="box-shadow: 0 10px 30px rgba(0,0,0,0.6), 0 20px 60px rgba(0,0,0,0.4);">
+                    <span>Mirar proyecto</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
                 </div>
-              </button>
+              </div>
+              <div class="w-full h-[600px] lg:h-[700px] border-t border-white/10">
+                <iframe src="https://brightfuture.es/" class="w-full h-full border-0" loading="lazy"
+                  title="Brightfuture Academy - Proyecto web">
+                </iframe>
+              </div>
             </div>
           </div>
 
           <!-- Proyecto 2 -->
-          <div
-            class="group relative overflow-hidden rounded-2xl border-gradient before:rounded-2xl transition-all duration-300 flex flex-col h-full min-h-[250px]"
-            style="background-color: #1D1D1D;">
-            <div
-              class="aspect-[4/3] overflow-hidden bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
-              <img src="portafolio/image2.webp" alt="SaaS Dashboard" class="w-full h-full object-cover" loading="lazy"
-                decoding="async">
-            </div>
-            <div class="p-4 flex flex-col justify-between h-full">
-              <div>
-                <h3 class="text-lg font-semibold text-white font-unbounded mb-2">Gualú Energía</h3>
-                <p class="text-base text-white/85 font-unbounded mb-4">
+          <div class="w-full">
+            <div class="rounded-3xl border-gradient before:rounded-3xl overflow-hidden"
+              style="background-color: #1D1D1D;">
+              <div class="p-6 lg:p-8">
+                <h3 class="text-2xl lg:text-3xl font-semibold text-white font-unbounded mb-3">Gualú Energía</h3>
+                <p class="text-base lg:text-lg text-white/85 font-unbounded mb-6">
                   Web corporativa para empresa energética que mejoró la interacción con los usuarios y recibió un alto
                   número de interacciones y muchos comentarios positivos.
                   Gracias a la web, la empresa ha recibido muchos clientes nuevos y ha aumentado su visibilidad en el
                   mercado.
                 </p>
-              </div>
-              <button
-                class="w-full px-6 py-3 bg-white border-2 border-white text-gray-800 text-sm font-unbounded rounded-xl hover:bg-gray-100 hover:border-gray-200 hover:shadow-lg hover:shadow-white/25 transition-all duration-300 flex items-center justify-center gap-2 group relative overflow-hidden"
-                onclick="window.open('https://gualu.es/', '_blank')" aria-label="Ver proyecto Gualú Energía">
-                <span class="relative z-10">Ver proyecto</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300 relative z-10">
-                  <path d="M7 17L17 7"></path>
-                  <path d="M7 7h10v10"></path>
-                </svg>
-                <div
-                  class="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="mb-6">
+                  <a href="https://gualu.es/" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-black rounded-xl font-semibold font-unbounded text-base hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-white/25"
+                    style="box-shadow: 0 10px 30px rgba(0,0,0,0.6), 0 20px 60px rgba(0,0,0,0.4);">
+                    <span>Mirar proyecto</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
                 </div>
-              </button>
+              </div>
+              <div class="w-full h-[600px] lg:h-[700px] border-t border-white/10">
+                <iframe src="https://gualu.es/" class="w-full h-full border-0" loading="lazy"
+                  title="Gualú Energía - Proyecto web">
+                </iframe>
+              </div>
             </div>
           </div>
 
           <!-- Proyecto 3 -->
-          <div
-            class="group relative overflow-hidden rounded-2xl border-gradient before:rounded-2xl transition-all duration-300 flex flex-col h-full min-h-[250px]"
-            style="background-color: #1D1D1D;">
-            <div
-              class="aspect-[4/3] overflow-hidden bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center">
-              <img src="portafolio/image3.webp" alt="Landing Page" class="w-full h-full object-cover" loading="lazy"
-                decoding="async">
-            </div>
-            <div class="p-4 flex flex-col justify-between h-full">
-              <div>
-                <h3 class="text-lg font-semibold text-white font-unbounded mb-2">A Su Medida</h3>
-                <p class="text-base text-white/85 font-unbounded mb-4">
+          <div class="w-full">
+            <div class="rounded-3xl border-gradient before:rounded-3xl overflow-hidden"
+              style="background-color: #1D1D1D;">
+              <div class="p-6 lg:p-8">
+                <h3 class="text-2xl lg:text-3xl font-semibold text-white font-unbounded mb-3">A Su Medida</h3>
+                <p class="text-base lg:text-lg text-white/85 font-unbounded mb-6">
                   En este proyecto, desarrollé una Landing Page para un psicólogo infantil, gracias al trafico que
                   redirige desde sus cuentas en redes sociales, la web ha recibido muchos clientes nuevos y ha aumentado
                   su visibilidad en el mercado.
                   Tiene una experiencia de usuario fluida y una buena conversión, gracias a la buena optimización de la
                   web.
                 </p>
-              </div>
-              <button
-                class="w-full px-6 py-3 bg-white border-2 border-white text-gray-800 text-sm font-unbounded rounded-xl hover:bg-gray-100 hover:border-gray-200 hover:shadow-lg hover:shadow-white/25 transition-all duration-300 flex items-center justify-center gap-2 group relative overflow-hidden"
-                onclick="window.open('https://asumedida.com', '_blank')" aria-label="Ver proyecto A Su Medida">
-                <span class="relative z-10">Ver proyecto</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300 relative z-10">
-                  <path d="M7 17L17 7"></path>
-                  <path d="M7 7h10v10"></path>
-                </svg>
-                <div
-                  class="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="mb-6">
+                  <a href="https://asumedida.com" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-black rounded-xl font-semibold font-unbounded text-base hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-white/25"
+                    style="box-shadow: 0 10px 30px rgba(0,0,0,0.6), 0 20px 60px rgba(0,0,0,0.4);">
+                    <span>Mirar proyecto</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
                 </div>
-              </button>
+              </div>
+              <div class="w-full h-[600px] lg:h-[700px] border-t border-white/10">
+                <iframe src="https://asumedida.com" class="w-full h-full border-0" loading="lazy"
+                  title="A Su Medida - Proyecto web">
+                </iframe>
+              </div>
             </div>
           </div>
 
-          <!-- Proyecto 4 - CRM -->
-          <div
-            class="group relative overflow-hidden rounded-2xl border-gradient before:rounded-2xl transition-all duration-300 flex flex-col h-full min-h-[250px]"
-            style="background-color: #1D1D1D;">
-            <div
-              class="aspect-[4/3] overflow-hidden bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center">
-              <img src="portafolio/image6.webp" alt="CRM con IA - Desarrollo web full stack"
-                class="w-full h-full object-cover" loading="lazy" decoding="async">
+          <!-- Proyecto 4 - Clairo Academy -->
+          <div class="w-full">
+            <div class="rounded-3xl border-gradient before:rounded-3xl overflow-hidden"
+              style="background-color: #1D1D1D;">
+              <div class="p-6 lg:p-8">
+                <h3 class="text-2xl lg:text-3xl font-semibold text-white font-unbounded mb-3">Clairo Academy</h3>
+                <p class="text-base lg:text-lg text-white/85 font-unbounded mb-6">
+                  Plataforma de cursos para eCommerce para la cual diseñé la página web y la identidad corporativa.
+                  Una experiencia digital que transmite claridad, criterio y profesionalismo, reflejando la metodología
+                  práctica y el enfoque estratégico de los workshops de eCommerce.
+                </p>
+                <div class="mb-6">
+                  <a href="https://clairoacademy.com/" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-black rounded-xl font-semibold font-unbounded text-base hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-white/25"
+                    style="box-shadow: 0 10px 30px rgba(0,0,0,0.6), 0 20px 60px rgba(0,0,0,0.4);">
+                    <span>Mirar proyecto</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="w-full h-[600px] lg:h-[700px] border-t border-white/10">
+                <iframe src="https://clairoacademy.com/" class="w-full h-full border-0" loading="lazy"
+                  title="Clairo Academy - Proyecto web">
+                </iframe>
+              </div>
             </div>
-            <div class="p-4 flex flex-col justify-between h-full">
-              <div>
-                <h3 class="text-lg font-semibold text-white font-unbounded mb-2">CRM con IA</h3>
-                <p class="text-base text-white/85 font-unbounded mb-4">
+          </div>
+
+          <!-- Proyecto 5 - Proyecto Talento -->
+          <div class="w-full">
+            <div class="rounded-3xl border-gradient before:rounded-3xl overflow-hidden"
+              style="background-color: #1D1D1D;">
+              <div class="p-6 lg:p-8">
+                <h3 class="text-2xl lg:text-3xl font-semibold text-white font-unbounded mb-3">Proyecto Talento</h3>
+                <p class="text-base lg:text-lg text-white/85 font-unbounded mb-6">
+                  Programa de desarrollo profesional para el cual desarrollé la página web y la identidad corporativa.
+                  Una plataforma que comunica claridad, profesionalismo y resultados, diseñada para impulsar carreras
+                  profesionales con herramientas prácticas y acompañamiento personalizado.
+                </p>
+                <div class="mb-6">
+                  <a href="https://proyectotalento.netlify.app/" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-black rounded-xl font-semibold font-unbounded text-base hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-white/25"
+                    style="box-shadow: 0 10px 30px rgba(0,0,0,0.6), 0 20px 60px rgba(0,0,0,0.4);">
+                    <span>Mirar proyecto</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="w-full h-[600px] lg:h-[700px] border-t border-white/10">
+                <iframe src="https://proyectotalento.netlify.app/" class="w-full h-full border-0" loading="lazy"
+                  title="Proyecto Talento - Proyecto web">
+                </iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 6 - CRM -->
+          <div class="w-full">
+            <div class="rounded-3xl border-gradient before:rounded-3xl overflow-hidden"
+              style="background-color: #1D1D1D;">
+              <div class="p-6 lg:p-8">
+                <h3 class="text-2xl lg:text-3xl font-semibold text-white font-unbounded mb-3">CRM con IA</h3>
+                <p class="text-base lg:text-lg text-white/85 font-unbounded mb-6">
                   Sistema CRM completo desarrollado con tecnologías full stack e integración de inteligencia artificial.
                   Gestión inteligente de clientes, automatización de procesos y análisis predictivo para optimizar las
                   ventas y mejorar la relación con los clientes.
                 </p>
+                <button
+                  class="px-8 py-4 bg-white border-2 border-white text-gray-800 text-base font-unbounded rounded-xl hover:bg-gray-100 hover:border-gray-200 hover:shadow-lg hover:shadow-white/25 transition-all duration-300 flex items-center justify-center gap-2 group relative overflow-hidden"
+                  onclick="showWhatsAppDialog('¡Hola! Me interesa solicitar acceso al CRM con IA.')"
+                  aria-label="Solicitar acceso al CRM">
+                  <span class="relative z-10">Solicitar acceso</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300 relative z-10">
+                    <path d="M7 17L17 7"></path>
+                    <path d="M7 7h10v10"></path>
+                  </svg>
+                  <div
+                    class="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  </div>
+                </button>
               </div>
-              <button
-                class="w-full px-6 py-3 bg-white border-2 border-white text-gray-800 text-sm font-unbounded rounded-xl hover:bg-gray-100 hover:border-gray-200 hover:shadow-lg hover:shadow-white/25 transition-all duration-300 flex items-center justify-center gap-2 group relative overflow-hidden"
-                onclick="showWhatsAppDialog('¡Hola! Me interesa solicitar acceso al CRM con IA.')"
-                aria-label="Solicitar acceso al CRM">
-                <span class="relative z-10">Solicitar acceso</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300 relative z-10">
-                  <path d="M7 17L17 7"></path>
-                  <path d="M7 7h10v10"></path>
-                </svg>
-                <div
-                  class="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                </div>
-              </button>
+              <div class="w-full h-[600px] lg:h-[700px] border-t border-white/10 overflow-hidden">
+                <img src="portafolio/image6.webp" alt="CRM con IA - Desarrollo web full stack"
+                  class="w-full h-full object-cover" loading="lazy" decoding="async">
+              </div>
             </div>
           </div>
 
-          <!-- Proyecto 5 - ERP -->
-          <div
-            class="group relative overflow-hidden rounded-2xl border-gradient before:rounded-2xl transition-all duration-300 flex flex-col h-full min-h-[250px]"
-            style="background-color: #1D1D1D;">
-            <div
-              class="aspect-[4/3] overflow-hidden bg-gradient-to-br from-teal-500 to-blue-500 flex items-center justify-center">
-              <img src="portafolio/image7.webp" alt="ERP con IA - Desarrollo web full stack"
-                class="w-full h-full object-cover" loading="lazy" decoding="async">
-            </div>
-            <div class="p-4 flex flex-col justify-between h-full">
-              <div>
-                <h3 class="text-lg font-semibold text-white font-unbounded mb-2">ERP con IA</h3>
-                <p class="text-base text-white/85 font-unbounded mb-4">
+          <!-- Proyecto 7 - ERP -->
+          <div class="w-full">
+            <div class="rounded-3xl border-gradient before:rounded-3xl overflow-hidden"
+              style="background-color: #1D1D1D;">
+              <div class="p-6 lg:p-8">
+                <h3 class="text-2xl lg:text-3xl font-semibold text-white font-unbounded mb-3">ERP con IA</h3>
+                <p class="text-base lg:text-lg text-white/85 font-unbounded mb-6">
                   Plataforma ERP completa desarrollada con stack full stack e inteligencia artificial.
                   Gestión integral de recursos empresariales, automatización de operaciones, análisis inteligente de
                   datos y optimización de procesos para mejorar la eficiencia operativa.
                 </p>
+                <button
+                  class="px-8 py-4 bg-white border-2 border-white text-gray-800 text-base font-unbounded rounded-xl hover:bg-gray-100 hover:border-gray-200 hover:shadow-lg hover:shadow-white/25 transition-all duration-300 flex items-center justify-center gap-2 group relative overflow-hidden"
+                  onclick="showWhatsAppDialog('¡Hola! Me interesa solicitar acceso al ERP con IA.')"
+                  aria-label="Solicitar acceso al ERP">
+                  <span class="relative z-10">Solicitar acceso</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300 relative z-10">
+                    <path d="M7 17L17 7"></path>
+                    <path d="M7 7h10v10"></path>
+                  </svg>
+                  <div
+                    class="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  </div>
+                </button>
               </div>
-              <button
-                class="w-full px-6 py-3 bg-white border-2 border-white text-gray-800 text-sm font-unbounded rounded-xl hover:bg-gray-100 hover:border-gray-200 hover:shadow-lg hover:shadow-white/25 transition-all duration-300 flex items-center justify-center gap-2 group relative overflow-hidden"
-                onclick="showWhatsAppDialog('¡Hola! Me interesa solicitar acceso al ERP con IA.')"
-                aria-label="Solicitar acceso al ERP">
-                <span class="relative z-10">Solicitar acceso</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300 relative z-10">
-                  <path d="M7 17L17 7"></path>
-                  <path d="M7 7h10v10"></path>
-                </svg>
-                <div
-                  class="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                </div>
-              </button>
-            </div>
-          </div>
-
-          <!-- Proyecto 6 -->
-          <div
-            class="group relative overflow-hidden rounded-2xl border-gradient before:rounded-2xl transition-all duration-300 flex flex-col h-full min-h-[250px]"
-            style="background-color: #1D1D1D;">
-            <div
-              class="aspect-[4/3] overflow-hidden bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center">
-              <img src="portafolio/image5.webp" alt="CreativaDX HIPERORB - Desarrollo web orientado a resultados"
-                class="w-full h-full object-cover" loading="lazy" decoding="async">
-            </div>
-            <div class="p-4 flex flex-col justify-between h-full">
-              <div>
-                <h3 class="text-lg font-semibold text-white font-unbounded mb-2">Nuestro Antiguo Proyecto</h3>
-                <p class="text-base text-white/85 font-unbounded mb-4">
-                  Página web orientada a resultados con servicios de desarrollo web, diseño UX/UI y branding. Diseño
-                  claro, rápido y emocionante que transmite valor y genera confianza.
-                </p>
+              <div class="w-full h-[600px] lg:h-[700px] border-t border-white/10 overflow-hidden">
+                <img src="portafolio/image7.webp" alt="ERP con IA - Desarrollo web full stack"
+                  class="w-full h-full object-cover" loading="lazy" decoding="async">
               </div>
-              <button
-                class="w-full px-6 py-3 bg-white border-2 border-white text-gray-800 text-sm font-unbounded rounded-xl hover:bg-gray-100 hover:border-gray-200 hover:shadow-lg hover:shadow-white/25 transition-all duration-300 flex items-center justify-center gap-2 group relative overflow-hidden"
-                onclick="window.open('https://joyful-muffin-eaa59f.netlify.app/', '_blank')"
-                aria-label="Ver proyecto CreativaDX HIPERORB">
-                <span class="relative z-10">Ver proyecto</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300 relative z-10">
-                  <path d="M7 17L17 7"></path>
-                  <path d="M7 7h10v10"></path>
-                </svg>
-                <div
-                  class="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                </div>
-              </button>
             </div>
           </div>
         </div>
@@ -1194,6 +1626,75 @@
       window.visualViewport.addEventListener('resize', setViewportHeight);
       window.visualViewport.addEventListener('scroll', setViewportHeight);
     }
+
+    // Navegación lateral dinámica
+    const sections = ['hero', 'servicios', 'testimonios', 'portafolio'];
+    const navDots = document.querySelectorAll('.nav-dot');
+
+    // Función para actualizar el menú activo
+    const updateActiveNav = () => {
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+      sections.forEach((sectionId, index) => {
+        const section = document.getElementById(sectionId);
+        if (!section) return;
+
+        const sectionTop = section.offsetTop;
+        const sectionBottom = sectionTop + section.offsetHeight;
+        const navDot = navDots[index];
+        const navLabel = navDot.querySelector('.nav-label');
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+          navDot.classList.add('active');
+          navDot.classList.remove('bg-white/30', 'border-white/50');
+          navDot.classList.add('bg-[#7C3AED]', 'border-[#7C3AED]', 'scale-125');
+          if (navLabel) {
+            navLabel.classList.add('opacity-100');
+            navLabel.classList.remove('opacity-0');
+          }
+        } else {
+          navDot.classList.remove('active');
+          navDot.classList.remove('bg-[#7C3AED]', 'border-[#7C3AED]', 'scale-125');
+          navDot.classList.add('bg-white/30', 'border-white/50');
+          if (navLabel) {
+            navLabel.classList.remove('opacity-100');
+            navLabel.classList.add('opacity-0');
+          }
+        }
+      });
+    };
+
+    // Navegación suave al hacer click
+    navDots.forEach((dot) => {
+      dot.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = dot.getAttribute('data-section');
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+          const offsetTop = targetSection.offsetTop - 100;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Actualizar al hacer scroll
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          updateActiveNav();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    // Actualizar al cargar la página
+    updateActiveNav();
 
   </script>
 
