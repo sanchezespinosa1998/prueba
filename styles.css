@@ -881,16 +881,33 @@ body {
         overflow-wrap: break-word;
     }
 
+    /* Centrado del título del hero en móvil */
+    .hero-desktop-text {
+        align-items: center;
+        text-align: center;
+    }
+
     .hero-title {
-        padding: 0 0.5rem;
+        padding: 0 0.75rem;
         font-size: clamp(1.75rem, 7vw, 2.5rem);
         word-break: normal;
         overflow-wrap: break-word;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
     }
 
     .hero-title span {
+        display: block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
         word-break: normal;
         overflow-wrap: break-word;
+        white-space: nowrap;
+        width: 100%;
     }
 
     /* Prevenir que se rompa la palabra "emprendedores" */
